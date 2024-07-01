@@ -17,6 +17,6 @@ def balance_handler(item: str, amount_given: int):
             continue
         n_change = balance // bill
         change[bill] = n_change
-        balance = balance - (n_change * bill)
+        balance = balance % bill
 
     return change
